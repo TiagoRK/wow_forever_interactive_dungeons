@@ -7,5 +7,8 @@ vp.addEventListener('pointermove',e=>{if(!pts.has(e.pointerId))return;pts.set(e.
 const up=e=>{pts.delete(e.pointerId);if(pts.size===1){const p=[...pts.values()][0];startX=p.x-tx;startY=p.y-ty;dragging=true}};
 vp.addEventListener('pointerup',up,true);vp.addEventListener('pointercancel',up,true);
 document.getElementById('dungeonList').addEventListener('click',e=>{if(innerWidth<=860&&e.target.closest('.dungeon-item'))document.getElementById('sidebar').classList.remove('open')});
+const baseRender=renderPanel;let lastKey=null;
+renderPanel=function(){const p=document.getElementById('detailPanel'),c=p.querySelector('.detail-content'),sc=c?c.scrollTop:0,key=selected&&selected.id;baseRender();document.querySelector('.app-shell').classList.toggle('picking',!!routeMode);if(!selected)p.classList.remove('expanded');const n=p.querySelector('.detail-content');if(n&&key===lastKey)n.scrollTop=sc;lastKey=key};
+document.getElementById('detailPanel').addEventListener('click',e=>{const p=e.currentTarget;if(innerWidth<=860&&e.clientY-p.getBoundingClientRect().top<26)p.classList.toggle('expanded')});
 if(innerWidth<=860){zoom=1.8;apply()}
 })();
