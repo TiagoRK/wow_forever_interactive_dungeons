@@ -44,3 +44,5 @@ O mesmo site se adapta ao celular (<= 860px): painéis viram gaveta/bottom sheet
 
 
 - No celular, o painel de detalhes tem uma barra no topo (nome da dungeon/NPC ou 'Rota até ...') que minimiza/expande ao toque; ao escolher a origem da rota ele minimiza sozinho.
+
+- Painel mobile com 3 estados: completo (botão ⌄⌄⌄ minimiza), minimizado (só o nome; ⌃⌃ mostra o caminho, ⌃⌃⌃ abre o completo) e caminho (nome + etapas da rota). O botão 'Dungeons' abre a lista.
