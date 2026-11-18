@@ -52,3 +52,5 @@ O mesmo site se adapta ao celular (<= 860px): painéis viram gaveta/bottom sheet
 - Capitais: por padrão só a bandeira da facção sobre o ícone da cidade; o nome aparece ao clicar no ícone (desktop e mobile).
 
 - No celular, a lista de dungeons fecha arrastando para a esquerda. O filtro de classe do loot é um seletor próprio.
+
+- O mapa é exibido como um pergaminho com hastes sobre uma mesa de madeira (visível ao diminuir o zoom).
