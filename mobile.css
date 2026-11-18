@@ -1,0 +1,38 @@
+.map-viewport{touch-action:none;-webkit-tap-highlight-color:transparent;user-select:none;-webkit-user-select:none}
+@media(max-width:860px){
+  html,body{height:100%;overscroll-behavior:none}
+  .app-shell{height:100dvh}
+  .map-area{height:100dvh}
+  .map-grain,.map-fog,.map-compass{display:none!important}
+  .map-canvas{transition:none;will-change:transform}
+  .continent,.terrain,.world-map *{filter:none!important}
+  .map-topbar{height:50px;background:#0e1411f0}
+  .menu-button,.map-tools button{min-width:38px;height:38px}
+  .map-tools #zoomValue{display:none}
+  .breadcrumb{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+  .sidebar{width:min(360px,92vw);padding:18px 16px 0;z-index:20}
+  .side-collapse{display:none!important}
+  .mobile-close{display:grid;place-items:center;width:38px;height:38px;border:1px solid #39463b;border-radius:4px;background:#1a241f}
+  .dungeon-item{padding:12px 10px}
+  .level-filter input{height:8px}
+  .level-filter input::-webkit-slider-thumb{width:26px;height:26px}
+  .detail-toggle{display:none!important}
+  .detail-panel{inset:auto 0 0 0;width:100%;height:68dvh;max-height:calc(100dvh - 60px);border-left:0;border-top:1px solid #655432;border-radius:14px 14px 0 0;transform:translateY(105%);box-shadow:0 -12px 36px #000a;z-index:15}
+  .detail-panel.open{transform:translateY(0)}
+  .detail-panel.open:before{content:'';display:block;width:42px;height:4px;border-radius:2px;background:#4a5a4e;margin:8px auto 0;flex:none}
+  .detail-content{padding-bottom:calc(30px + env(safe-area-inset-bottom))}
+  .back-button{width:38px;height:38px}
+  .tab-button{padding:10px 11px;font-size:11px}
+  .boss-row,.route-choice,.route-action{padding:12px}
+  .boss-row span:nth-child(2){font-size:12px}
+  .lore,.info-note,.route-step,.quest-card p{font-size:11px}
+  .route-hint{top:58px;z-index:25}
+  .mobile-list-button{bottom:calc(40px + env(safe-area-inset-bottom));padding:12px 15px;font-size:12px;z-index:12}
+  .app-shell:has(.detail-panel.open) .mobile-list-button,.app-shell:has(.detail-panel.open) .map-legend{display:none}
+  .map-legend{bottom:calc(40px + env(safe-area-inset-bottom));left:8px;gap:9px;padding:6px 8px}
+  .map-attribution{display:none}
+  .map-status{height:30px}
+  .item-name{font-size:13px}
+  .item-meta,.item-range{font-size:10px}
+  .map-pin circle.pin-core{r:9px}
+}

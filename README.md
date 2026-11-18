@@ -37,3 +37,8 @@ Protótipo local de mapa interativo em português. Abra `index.html` em um naveg
 
 Site estático (GitHub Pages): https://tiagork.github.io/wow_forever_interactive_dungeons/ . Em Settings > Pages, use a branch main, pasta raiz. Para rodar local: python -m http.server e abra http://localhost:8000.
 
+
+## Mobile
+
+O mesmo site se adapta ao celular (<= 860px): painéis viram gaveta/bottom sheet, pinça para zoom, arraste com um dedo, efeitos pesados desativados (mobile.css, mobile.js).
+
