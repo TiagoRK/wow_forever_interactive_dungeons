@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#101512" />
+  <title>Azeroth Atlas — WoW Forever</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <header class="brand"><div class="brand-mark">✦</div><div><span class="eyebrow">GUIA DE AVENTURA</span><h1>AZEROTH <i>ATLAS</i></h1></div><button class="mobile-close" id="closeSidebar" aria-label="Fechar menu">×</button></header>
+      <div class="faction-switch" role="group" aria-label="Escolher facção">
+        <button class="faction alliance active" data-faction="alliance"><span class="faction-icon">✥</span> ALIANÇA</button>
+        <button class="faction horde" data-faction="horde"><span class="faction-icon">⚔</span> HORDA</button>
+      </div>
+      <div class="list-heading"><div><span class="eyebrow">INSTÂNCIAS</span><h2>Explorar dungeons</h2></div><span class="count" id="dungeonCount">35</span></div>
+      <div class="search-wrap"><span>⌕</span><input id="search" type="search" placeholder="Buscar dungeon ou região" aria-label="Buscar dungeon" /></div>
+      <div class="level-filter"><label for="levelRange">NÍVEL DO PERSONAGEM <b id="levelLabel">Todos</b></label><input id="levelRange" type="range" min="10" max="60" value="10" /><div class="level-ends"><span>10</span><span>60</span></div></div>
+      <nav class="dungeon-list" id="dungeonList" aria-label="Dungeons por nível"></nav>
+      <footer class="sidebar-foot"><span class="source-dot"></span> Dados WoW Forever <span class="foot-divider">·</span><a href="https://www.wowhead.com/forever/guide/dungeons-overview-locations-details" target="_blank" rel="noreferrer">Fonte ↗</a></footer>
+    </aside>
+    <section class="map-area">
+      <div class="map-topbar"><button class="menu-button" id="openSidebar" aria-label="Abrir menu">☰</button><div class="breadcrumb"><span>AZEROTH</span><b> / </b><span id="topLabel">VISÃO GERAL</span></div><div class="map-tools"><button id="zoomOut" aria-label="Diminuir zoom">−</button><span id="zoomValue">100%</span><button id="zoomIn" aria-label="Aumentar zoom">＋</button><span class="tool-divider"></span><button id="resetMap" class="reset-button">⌖ <span>Centralizar</span></button></div></div>
+      <div class="map-viewport" id="mapViewport">
+        <div class="map-canvas" id="mapCanvas">
+          <div class="map-grain"></div>
+          <svg class="world-map" viewBox="0 0 1659 1103" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Mapa de terreno de Azeroth do atlas de WoW Forever com marcadores interativos">
+            <rect width="1659" height="1103" fill="#1a2925"/>
+            <image class="world-map-image" href="https://wowforever.gg/assets/wow-forever-azeroth-gelaendekarte.webp" x="0" y="0" width="1659" height="1103" preserveAspectRatio="none" />
+            <g class="roads" fill="none" stroke="#e0d39e" stroke-opacity=".7" stroke-width="3" stroke-dasharray="9 8" id="routeLines"></g>
+            <g id="pins"></g><g id="travelRoute"></g>
+          </svg>
+          <div class="map-compass"><span>N</span><i>✦</i></div>
+          <div class="map-legend"><span><i class="legend-pin alliance-dot"></i> Aliança</span><span><i class="legend-pin horde-dot"></i> Horda</span><span><i class="legend-pin mixed-dot"></i> Ambas</span></div>
+          <div class="route-hint" id="routeHint"><span>⌖</span><div><b>Escolha seu ponto de partida</b><small>Clique em uma cidade ou região no mapa</small></div><button id="cancelRoute">×</button></div>
+          <div class="map-attribution">MAPA BASE: <a href="https://wowforever.gg/es/atlas/" target="_blank" rel="noreferrer">ATLAS DE WOW FOREVER ↗</a> · PINS SOBREPOSTOS</div>
+        </div>
+      </div>
+      <button class="mobile-list-button" id="mobileList">☷ Dungeons</button>
+      <div class="map-status"><span><i></i> AZEROTH</span><span id="statusText">35 locais mapeados</span><span>FOREVER EDITION</span></div>
+    </section>
+    <aside class="detail-panel" id="detailPanel" aria-live="polite"></aside>
+  </main>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
