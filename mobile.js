@@ -14,5 +14,6 @@ renderPanel=function(){const p=document.getElementById('detailPanel'),c=p.queryS
 document.getElementById('detailPanel').addEventListener('click',e=>{const b=e.target.closest('.sheet-btn');if(b){e.stopPropagation();document.getElementById('detailPanel').dataset.sheet=b.dataset.act;renderPanel()}},true);
 const bs=startRoute;startRoute=function(){if(innerWidth<=860)document.getElementById('detailPanel').dataset.sheet='mini';bs.apply(this,arguments)};
 const bf=finishRoute;finishRoute=function(){if(innerWidth<=860)document.getElementById('detailPanel').dataset.sheet='peek';bf.apply(this,arguments)};
-const ml=document.getElementById('mobileList');ml.addEventListener('click',()=>{document.querySelector('.app-shell').classList.remove('sb-collapsed');document.getElementById('sidebar').classList.add('open')});ml.addEventListener('pointerup',e=>e.stopPropagation());if(innerWidth<=860){zoom=1.8;apply()}
+const eh=document.createElement('div');eh.className='edge-handle';eh.innerHTML='<i></i>';document.querySelector('.app-shell').appendChild(eh);let ex=null;const openList=()=>{document.querySelector('.app-shell').classList.remove('sb-collapsed');document.getElementById('sidebar').classList.add('open')};
+eh.addEventListener('pointerdown',e=>{ex=e.clientX;eh.setPointerCapture(e.pointerId)});eh.addEventListener('pointermove',e=>{if(ex!==null&&Math.abs(e.clientX-ex)>24){ex=null;openList()}});eh.addEventListener('pointerup',()=>{if(ex!==null)openList();ex=null});eh.addEventListener('pointercancel',()=>{ex=null});if(innerWidth<=860){zoom=1.8;apply()}
 })();
