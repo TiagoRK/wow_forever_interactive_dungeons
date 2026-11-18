@@ -32,3 +32,8 @@ Protótipo local de mapa interativo em português. Abra `index.html` em um naveg
 - Busca de dungeon/região e filtro por nível.
 - Zoom por controles ou scroll do mouse; seleção de dungeon/NPC centraliza e aproxima o mapa.
 - Detalhes de dungeon, chefes, missões e NPCs com retratos, além do seletor de origem para planejar uma rota indicativa.
+
+## Hospedagem
+
+Site estático (GitHub Pages): https://tiagork.github.io/wow_forever_interactive_dungeons/ . Em Settings > Pages, use a branch main, pasta raiz. Para rodar local: python -m http.server e abra http://localhost:8000.
+
