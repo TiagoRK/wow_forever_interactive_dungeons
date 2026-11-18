@@ -87,3 +87,5 @@
   .map-legend{bottom:45px;left:10px}
   .map-attribution{bottom:32px}
 }
+
+.cs{position:relative;margin:0 0 10px}.cs-btn{display:flex;align-items:center;justify-content:space-between;width:100%;padding:9px 12px;border:1px solid #715d36;border-radius:3px;background:linear-gradient(180deg,#2c281c,#1a1a15);color:#ecdcae;font:600 12px 'DM Sans',sans-serif;cursor:pointer}.cs-btn:hover,.cs.open .cs-btn{border-color:#c3a351}.cs-btn svg{width:11px;height:7px;fill:none;stroke:#c9b27a;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;transition:transform .15s}.cs.open .cs-btn svg{transform:rotate(180deg)}.cs-list{display:none;position:absolute;left:0;right:0;top:calc(100% + 4px);z-index:30;max-height:240px;overflow:auto;border:1px solid #715d36;border-radius:3px;background:#17160f;box-shadow:0 10px 26px #000c}.cs.open .cs-list{display:block}.cs-list button{display:block;width:100%;padding:9px 12px;border:0;border-bottom:1px solid #2a2619;background:none;color:#d8ccaa;font:500 12px 'DM Sans',sans-serif;text-align:left;cursor:pointer}.cs-list button:hover{background:#3a321f;color:#fff2c4}.cs-list button.on{color:#f0d994;background:#2d2819}

@@ -14,7 +14,8 @@
   .sidebar{position:fixed;left:0;top:0;bottom:0;height:auto;width:min(360px,92vw);padding:18px 16px 0;z-index:30;transform:translateX(-102%);transition:transform .22s;box-shadow:18px 0 40px #000a}
   .sidebar.open{transform:translateX(0)}
   .side-collapse{display:none!important}
-  .mobile-close{display:grid;place-items:center;width:38px;height:38px;border:1px solid #39463b;border-radius:4px;background:#1a241f}
+  .mobile-close{display:none!important;x:0}
+  .mobile-close-old{display:grid;place-items:center;width:38px;height:38px;border:1px solid #39463b;border-radius:4px;background:#1a241f}
   .dungeon-item{padding:12px 10px}
   .level-filter input{height:8px}
   .level-filter input::-webkit-slider-thumb{width:26px;height:26px}
