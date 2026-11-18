@@ -48,3 +48,5 @@ O mesmo site se adapta ao celular (<= 860px): painéis viram gaveta/bottom sheet
 - Painel mobile com 3 estados: completo (botão ⌄⌄⌄ minimiza), minimizado (só o nome; ⌃⌃ mostra o caminho, ⌃⌃⌃ abre o completo) e caminho (nome + etapas da rota). O botão 'Dungeons' abre a lista.
 
 - No celular, a lista de dungeons abre pela aba lateral na borda esquerda (toque ou arraste).
+
+- Capitais: por padrão só a bandeira da facção sobre o ícone da cidade; o nome aparece ao clicar no ícone (desktop e mobile).

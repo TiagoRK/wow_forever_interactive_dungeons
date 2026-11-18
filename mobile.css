@@ -11,7 +11,8 @@
   .menu-button,.map-tools button{min-width:38px;height:38px}
   .map-tools #zoomValue{display:none}
   .breadcrumb{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
-  .sidebar{width:min(360px,92vw);padding:18px 16px 0;z-index:20}
+  .sidebar{position:fixed;left:0;top:0;bottom:0;height:auto;width:min(360px,92vw);padding:18px 16px 0;z-index:30;transform:translateX(-102%);transition:transform .22s;box-shadow:18px 0 40px #000a}
+  .sidebar.open{transform:translateX(0)}
   .side-collapse{display:none!important}
   .mobile-close{display:grid;place-items:center;width:38px;height:38px;border:1px solid #39463b;border-radius:4px;background:#1a241f}
   .dungeon-item{padding:12px 10px}
@@ -24,7 +25,7 @@
   .sheet-bar{display:flex;align-items:center;gap:10px;flex:none;width:100%;height:50px;padding:0 16px;border:0;border-bottom:1px solid #2c372f;background:#141c17;color:#f1e6c8;font:inherit;text-align:left;cursor:pointer;position:relative;border-radius:14px 14px 0 0}
   .sheet-grip{display:none;position:absolute;top:6px;left:50%;width:42px;height:4px;margin-left:-21px;border-radius:2px;background:#4a5a4e}
   .sheet-btn{display:grid;place-items:center;width:42px;height:38px;margin-top:6px;border:1px solid #39463b;border-radius:4px;background:#1a241f;color:#c9b27a;padding:0}
-  .chev{display:flex;flex-direction:column;line-height:.3;font-size:12px;font-style:normal}.chev i{font-style:normal}
+  .chev{display:flex;flex-direction:column;align-items:center;gap:0}.chev svg{width:14px;height:6px;display:block;margin:-1px 0;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
   .sheet-peek{display:none;overflow:auto;padding:8px 16px 14px;max-height:34dvh;flex:none}
   .peek-origin{font-size:10px;color:#c9b27a;letter-spacing:.08em;margin-bottom:6px}
   .detail-panel[data-sheet=mini],.detail-panel[data-sheet=peek]{height:auto}
