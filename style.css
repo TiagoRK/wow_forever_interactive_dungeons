@@ -40,6 +40,18 @@
 .map-canvas{inset:0}
 .map-viewport{background:#102638}
 .map-viewport,.map-canvas,.world-map,.world-map *{user-select:none;-webkit-user-select:none}
+.side-collapse,.detail-toggle{display:none}
+@media(min-width:861px){
+  .side-collapse{display:block;margin-left:auto;width:26px;height:26px;background:#1a241f;border:1px solid #39463b;border-radius:3px;color:#ddd5be;font-size:16px;line-height:1;cursor:pointer}
+  .side-collapse:hover,.detail-toggle:hover,.menu-button:hover{border-color:#a4894b;color:#f0d994}
+  .app-shell.sb-collapsed{grid-template-columns:0 minmax(0,1fr)}
+  .app-shell.sb-collapsed .sidebar{display:none}
+  .app-shell.sb-collapsed .menu-button{display:block;background:#1a241f;border:1px solid #39463b;border-radius:3px;color:#ddd5be;width:30px;height:30px;cursor:pointer}
+  .app-shell.has-detail .detail-toggle{display:block;position:absolute;z-index:6;top:64px;right:min(390px,calc(100vw - 306px));width:22px;height:46px;background:#1a1d16;border:1px solid #655432;border-right:0;border-radius:4px 0 0 4px;color:#e8d69e;font-size:16px;cursor:pointer}
+  .app-shell.sb-collapsed.has-detail .detail-toggle{right:min(390px,100vw)}
+  .app-shell.detail-collapsed .detail-toggle{right:0}
+  .app-shell.detail-collapsed .detail-panel{display:none}
+}
 .item-tip{position:fixed;left:0;top:0;width:max-content;min-width:180px;max-width:min(320px,calc(100vw - 16px));z-index:50;padding:8px 10px;background:rgba(8,10,18,.97);border:1px solid #6d6f80;border-radius:4px;box-shadow:0 8px 28px #000c;color:#ffd100;font:12px/1.4 'DM Sans',Arial,sans-serif;pointer-events:none;display:none}
 .item-tip table{border-collapse:collapse;width:100%}.item-tip td,.item-tip th{padding:0;vertical-align:top}.item-tip th{text-align:right;font-weight:400;padding-left:18px;white-space:nowrap}.item-tip table table{margin:0}
 .item-tip b{font-size:14px}.item-tip .q{color:#ffd100}.item-tip .q0,.item-tip b.q0{color:#9d9d9d}.item-tip .q1{color:#fff}.item-tip .q2{color:#1eff00}.item-tip .q3{color:#0070dd}.item-tip b.q3{color:#4aa3ff}.item-tip .q4{color:#c25bff}.item-tip .q5{color:#ff8000}
