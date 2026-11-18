@@ -54,3 +54,8 @@ O mesmo site se adapta ao celular (<= 860px): painéis viram gaveta/bottom sheet
 - No celular, a lista de dungeons fecha arrastando para a esquerda. O filtro de classe do loot é um seletor próprio.
 
 - O mapa é exibido como um pergaminho com hastes sobre uma mesa de madeira (visível ao diminuir o zoom).
+
+
+### Ajustes recentes
+- Nome do item no loot só mostra tooltip; o link para o Wowhead fica no pequeno ícone ↗ à direita.
+- Zoom do mapa limitado (mín. 0,8x, máx. 5x); zoom da página bloqueado no celular.
