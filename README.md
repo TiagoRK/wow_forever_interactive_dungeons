@@ -11,11 +11,12 @@ Protótipo local de mapa interativo em português. Abra `index.html` em um naveg
 - A relação de chefes e os registros específicos de Forever vêm do guia de dungeons de Forever. Dungeons novas sem lista de chefes publicada aparecem sem dados.
 - NPCs de missão usam a posição do atlas quando existe; caso contrário, a entrada da dungeon.
 - Rotas são calculadas (Dijkstra) sobre a rede de voos, barcos e caminhos a pé do atlas, com até 3 opções (mais rápida, sem voos, só por terra). O protótipo não lê voos desbloqueados; confira no jogo.
-- O filtro de classe foi removido; o loot mostra o que o Wowhead lista para o chefe.
+- O loot dos chefes tem filtro por classe, baseado no tipo de equipamento (tecido, couro, malha, placa, armas) e em restrições de classe dos tooltips do Wowhead Forever.
+- Com um NPC de missão selecionado, "Como chegar" traça a rota até o NPC; caso contrário, até a dungeon.
 
 ## Interações
 
-- Alternância entre Aliança e Horda; dungeons neutras/mistas ficam disponíveis para ambas.
+- Alternância entre Aliança e Horda; dungeons dentro de capitais (ex.: Salão dos Thanes, só Aliança) são restritas ao lado; as demais ficam disponíveis para ambas.
 - Busca de dungeon/região e filtro por nível.
 - Zoom por controles ou scroll do mouse; seleção de dungeon/NPC centraliza e aproxima o mapa.
 - Detalhes de dungeon, chefes, missões e NPCs com retratos, além do seletor de origem para planejar uma rota indicativa.
