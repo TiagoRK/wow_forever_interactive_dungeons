@@ -14,6 +14,8 @@ Protótipo local de mapa interativo em português. Abra `index.html` em um naveg
 - O loot dos chefes tem filtro por classe, baseado no tipo de equipamento (tecido, couro, malha, placa, armas) e em restrições de classe dos tooltips do Wowhead Forever.
 - Passar o mouse sobre um item mostra o tooltip completo (status, requisitos, preço), como no jogo; os textos vêm de `tooltips.js`, gerado a partir dos tooltips do Wowhead Forever.
 - A origem do "Como chegar" é o ponto exato clicado no mapa (ou a entrada de uma dungeon): o app converte o pixel em zona e coordenadas do jogo (grade de zonas do atlas) e traça a rota com setas de direção, sem etapa inicial até uma cidade.
+- Ao selecionar uma dungeon, as demais somem do mapa; clicar em área vazia desseleciona. Dungeons mistas usam pin meio azul/meio vermelho, e as capitais têm rótulo no mapa.
+- As missões dos NPCs têm link para a busca no Wowhead Forever.
 - Os marcadores de NPC de missão são clicáveis diretamente no mapa e o arrastar do mapa não seleciona texto.
 - Selecionar um pin (dungeon ou NPC) mantém o zoom e a posição atuais do mapa.
 - A lista de dungeons (botão ‹ no topo) e o painel de detalhes (aba ›/‹ na borda) podem ser recolhidos e expandidos.
