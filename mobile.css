@@ -1,10 +1,11 @@
+.sheet-bar{display:none}
 .map-viewport{touch-action:none;-webkit-tap-highlight-color:transparent;user-select:none;-webkit-user-select:none}
 @media(max-width:860px){
   html,body{height:100%;overscroll-behavior:none}
   .app-shell{height:100dvh}
   .map-area{height:100dvh}
   .map-grain,.map-fog,.map-compass{display:none!important}
-  .map-canvas{transition:none;will-change:transform}
+  .map-canvas{transition:none}
   .continent,.terrain,.world-map *{filter:none!important}
   .map-topbar{height:50px;background:#0e1411f0}
   .menu-button,.map-tools button{min-width:38px;height:38px}
@@ -19,9 +20,14 @@
   .detail-toggle{display:none!important}
   .detail-panel{inset:auto 0 0 0;width:100%;height:68dvh;max-height:calc(100dvh - 60px);border-left:0;border-top:1px solid #655432;border-radius:14px 14px 0 0;transform:translateY(105%);box-shadow:0 -12px 36px #000a;z-index:15}
   .detail-panel.open{transform:translateY(0)}
-  .detail-panel.open:before{content:'';display:block;flex:none;height:26px;background:linear-gradient(#4a5a4e,#4a5a4e) center/42px 4px no-repeat;cursor:pointer}
-  .detail-panel.expanded{height:calc(100dvh - 56px)}
-  .app-shell.picking .detail-panel,.app-shell.picking .mobile-list-button{transform:translateY(105%)}
+  .app-shell.picking .mobile-list-button{display:none}
+  .sheet-bar{display:flex;align-items:center;gap:10px;flex:none;width:100%;height:50px;padding:0 16px;border:0;border-bottom:1px solid #2c372f;background:#141c17;color:#f1e6c8;font:inherit;text-align:left;cursor:pointer;position:relative;border-radius:14px 14px 0 0}
+  .sheet-grip{position:absolute;top:6px;left:50%;width:42px;height:4px;margin-left:-21px;border-radius:2px;background:#4a5a4e}
+  .sheet-title{flex:1;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;font-size:13px;padding-top:6px}
+  .sheet-chev{font-size:20px;color:#c9b27a;padding-top:6px;transition:transform .2s}
+  .detail-panel.minimized{height:50px}
+  .detail-panel.minimized .detail-content{display:none}
+  .detail-panel.minimized .sheet-chev{transform:rotate(180deg)}
   .menu-button{display:none!important}
   .detail-content{padding-bottom:calc(30px + env(safe-area-inset-bottom))}
   .back-button{width:38px;height:38px}

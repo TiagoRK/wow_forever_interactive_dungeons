@@ -8,7 +8,8 @@ const up=e=>{pts.delete(e.pointerId);if(pts.size===1){const p=[...pts.values()][
 vp.addEventListener('pointerup',up,true);vp.addEventListener('pointercancel',up,true);
 document.getElementById('dungeonList').addEventListener('click',e=>{if(innerWidth<=860&&e.target.closest('.dungeon-item'))document.getElementById('sidebar').classList.remove('open')});
 const baseRender=renderPanel;let lastKey=null;
-renderPanel=function(){const p=document.getElementById('detailPanel'),c=p.querySelector('.detail-content'),sc=c?c.scrollTop:0,key=selected&&selected.id;baseRender();document.querySelector('.app-shell').classList.toggle('picking',!!routeMode);if(!selected)p.classList.remove('expanded');const n=p.querySelector('.detail-content');if(n&&key===lastKey)n.scrollTop=sc;lastKey=key};
-document.getElementById('detailPanel').addEventListener('click',e=>{const p=e.currentTarget;if(innerWidth<=860&&e.clientY-p.getBoundingClientRect().top<26)p.classList.toggle('expanded')});
-if(innerWidth<=860){zoom=1.8;apply()}
+renderPanel=function(){const p=document.getElementById('detailPanel'),c=p.querySelector('.detail-content'),sc=c?c.scrollTop:0,key=selected&&selected.id;baseRender();document.querySelector('.app-shell').classList.toggle('picking',!!routeMode);if(!selected){p.classList.remove('minimized');return}const n=p.querySelector('.detail-content');if(n&&key===lastKey)n.scrollTop=sc;lastKey=key;const t=activeTab==='route'&&routeTarget?routeTarget:currentTarget(),b=document.createElement('button');b.className='sheet-bar';b.innerHTML=`<span class="sheet-grip"></span><span class="sheet-title">${activeTab==='route'?'Rota até ':''}<b>${t.name}</b></span><span class="sheet-chev">⌃</span>`;p.prepend(b)};
+document.getElementById('detailPanel').addEventListener('click',e=>{if(e.target.closest('.sheet-bar'))e.currentTarget.classList.toggle('minimized')});
+const bs=startRoute;startRoute=function(){bs.apply(this,arguments);if(innerWidth<=860)document.getElementById('detailPanel').classList.add('minimized')};
+const bf=finishRoute;finishRoute=function(){bf.apply(this,arguments);document.getElementById('detailPanel').classList.remove('minimized')};if(innerWidth<=860){zoom=1.8;apply()}
 })();
