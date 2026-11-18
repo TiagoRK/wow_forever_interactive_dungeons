@@ -37,6 +37,8 @@
   .edge-handle{display:grid;place-items:center;position:fixed;left:0;top:50%;width:22px;height:84px;margin-top:-42px;z-index:12;background:#141c17e8;border:1px solid #655432;border-left:0;border-radius:0 10px 10px 0;touch-action:none}
   .edge-handle i{width:4px;height:36px;border-radius:2px;background:#c9b27a}
   .app-shell.picking .edge-handle,.sidebar.open~.edge-handle{display:none}
+  .edge-close{display:none;left:min(360px,92vw);z-index:31}
+  .sidebar.open~.edge-close{display:grid}
   .detail-content{padding-bottom:calc(30px + env(safe-area-inset-bottom))}
   .back-button{width:38px;height:38px}
   .tab-button{padding:10px 11px;font-size:11px}
